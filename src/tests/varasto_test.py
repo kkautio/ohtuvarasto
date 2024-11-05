@@ -37,9 +37,23 @@ class TestVarasto(unittest.TestCase):
     #
 
     #OMATEKEMÄ
-    def test_laittaa_liikaa(self):
-        self.tilavuus = 5
+    def test_laittaa_varastoon(self):
         self.varasto.lisaa_varastoon(8)
+    #
+
+    #OMATEKEMÄ
+    def test_lisataan_pienempinolla (self):
+        self.varasto.lisaa_varastoon(-2)
+    #
+
+     #OMATEKEMÄ
+    def test_laittaa_liikaa_varastoon(self):
+        self.varasto.lisaa_varastoon(13)
+    #
+
+    #OMATEKEMÄ
+    def test_ottaa_vahemmankun_nolla (self):
+        self.varasto.ota_varastosta(-2)
     #
 
     def test_ottaminen_lisaa_tilaa(self):
