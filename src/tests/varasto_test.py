@@ -69,9 +69,9 @@ class TestVarasto(unittest.TestCase):
     #
 
     #OMATEKEMÄ
-    def returnaa_tilatiedot(self):
+    def test_returnaa_tilatiedot(self):
         self.varastontilanne = Varasto(10, 5)
-        self.assertEqual(str(self.varastontilanne), "saldo = 5, vielä tilaa 5")
+        self.assertEqual(str(self.varastontilanne), "saldo = 6, vielä tilaa 4") 
     #
 
     def test_ottaminen_lisaa_tilaa(self):
