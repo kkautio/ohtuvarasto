@@ -31,6 +31,17 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(saatu_maara, 2)
 
+    #OMATEKEMÄ
+    def test_ottaa_liikaa(self):
+        self.varasto.ota_varastosta(11)
+    #
+
+    #OMATEKEMÄ
+    def test_laittaa_liikaa(self):
+        self.tilavuus = 5
+        self.varasto.lisaa_varastoon(8)
+    #
+
     def test_ottaminen_lisaa_tilaa(self):
         self.varasto.lisaa_varastoon(8)
 
