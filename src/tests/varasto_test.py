@@ -31,47 +31,47 @@ class TestVarasto(unittest.TestCase):
 
         self.assertAlmostEqual(saatu_maara, 2)
 
-    #OMATEKEMÄ
+    # OMATEKEMÄ
     def test_ottaa_liikaa(self):
         self.varasto.ota_varastosta(11)
     #
 
-    #OMATEKEMÄ
+    # OMATEKEMÄ
     def test_laittaa_varastoon(self):
         self.varasto.lisaa_varastoon(8)
     #
 
-    #OMATEKEMÄ
-    def test_lisataan_pienempinolla (self):
+    # OMATEKEMÄ
+    def test_lisataan_pienempinolla(self):
         self.varasto.lisaa_varastoon(-2)
     #
 
-     #OMATEKEMÄ
+     # OMATEKEMÄ
     def test_laittaa_liikaa_varastoon(self):
         self.varasto.lisaa_varastoon(13)
     #
 
-    #OMATEKEMÄ
-    def test_ottaa_vahemmankun_nolla (self):
+    # OMATEKEMÄ
+    def test_ottaa_vahemmankun_nolla(self):
         self.varasto.ota_varastosta(-2)
     #
 
-    #OMATEKEMÄ
+    # OMATEKEMÄ
     def test_konstruktori_tilavuus_negatiivinen(self):
         varasto_negatiivinen = Varasto(-5)
         self.assertAlmostEqual(varasto_negatiivinen.tilavuus, 0.0)
     #
 
-    #OMATEKEMÄ
+    # OMATEKEMÄ
     def test_konstruktori_alku_saldo_negatiivinen(self):
         varasto_saldo_negatiivinen = Varasto(10, -5)
         self.assertAlmostEqual(varasto_saldo_negatiivinen.saldo, 0.0)
     #
 
-    #OMATEKEMÄ
+    # OMATEKEMÄ
     def test_returnaa_tilatiedot(self):
         self.varastontilanne = Varasto(10, 5)
-        self.assertEqual(str(self.varastontilanne), "saldo = 5, vielä tilaa 5") 
+        self.assertEqual(str(self.varastontilanne), "saldo = 5, vielä tilaa 5")
     #
 
     def test_ottaminen_lisaa_tilaa(self):
